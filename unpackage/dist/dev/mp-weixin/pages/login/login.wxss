@@ -24,47 +24,47 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.content.data-v-c01d622e {
+.content.data-v-546a8115 {
   padding: 100rpx;
 }
-.logo.data-v-c01d622e {
+.logo.data-v-546a8115 {
   text-align: center;
 }
-.logo image.data-v-c01d622e {
+.logo image.data-v-546a8115 {
     height: 200rpx;
     width: 200rpx;
     margin: 0 0 60rpx;
 }
-.uni-form-item.data-v-c01d622e {
+.uni-form-item.data-v-546a8115 {
   margin-bottom: 40rpx;
   padding: 0;
   border-bottom: 1px solid #e3e3e3;
 }
-.uni-form-item .uni-input.data-v-c01d622e {
+.uni-form-item .uni-input.data-v-546a8115 {
     font-size: 30rpx;
     padding: 7px 0;
 }
-button[type="primary"].data-v-c01d622e {
+button[type="primary"].data-v-546a8115 {
   background-color: #b49950;
   border-radius: 0;
   font-size: 34rpx;
   margin-top: 60rpx;
 }
-.links.data-v-c01d622e {
+.links.data-v-546a8115 {
   text-align: center;
   margin-top: 40rpx;
   font-size: 26rpx;
   color: #999;
 }
-.links .navigator.data-v-c01d622e, .links view.data-v-c01d622e {
+.links .navigator.data-v-546a8115, .links view.data-v-546a8115 {
     display: inline-block;
     vertical-align: top;
     margin: 0 10rpx;
 }
-.links .link-highlight.data-v-c01d622e {
+.links .link-highlight.data-v-546a8115 {
     color: #b49950;
 }
-.oauth-row.data-v-c01d622e {
+.oauth-row.data-v-546a8115 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -80,7 +80,7 @@ button[type="primary"].data-v-c01d622e {
   left: 0;
   width: 100%;
 }
-.oauth-row .oauth-image.data-v-c01d622e {
+.oauth-row .oauth-image.data-v-546a8115 {
     position: relative;
     width: 50px;
     height: 50px;
@@ -89,12 +89,12 @@ button[type="primary"].data-v-c01d622e {
     margin: 0 20px;
     background-color: #ffffff;
 }
-.oauth-row .oauth-image image.data-v-c01d622e {
+.oauth-row .oauth-image image.data-v-546a8115 {
       width: 30px;
       height: 30px;
       margin: 10px;
 }
-.oauth-row .oauth-image button.data-v-c01d622e {
+.oauth-row .oauth-image button.data-v-546a8115 {
       position: absolute;
       left: 0;
       top: 0;

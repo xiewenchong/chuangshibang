@@ -2,7 +2,7 @@
 	<view class="content">
 		<view v-if="!changeSuccess">
 			<view class="uni-form-item uni-column">
-				<input type="tel" class="uni-input" name="" placeholder="请输入手机号" />
+				<input type="tel" class="uni-input" name="" placeholder="请输入手机号" v-model="phoneNum"/>
 			</view>
 			<view class="uni-form-item uni-column column-with-btn">
 				<input type="text" class="uni-input" name="" placeholder="请输入图片验证码" v-model="captchaImg" />
@@ -28,6 +28,7 @@
 	export default {
 		data() {
 			return {
+				phoneNum: '',
 				captchaImg: '',
 				seconds: 10,
 				codeBtn: {
@@ -65,7 +66,7 @@
 		},
 		computed: {
 			disableCodeBtn: function (){
-				return this.codeBtn.waitingCode || this.captchaImg.length < 4;
+				return this.codeBtn.waitingCode || this.phoneNum.length < 4;
 			} 
 		}
 	}
