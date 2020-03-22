@@ -4,16 +4,19 @@
 			<view class="uni-form-item uni-column">
 				<input type="tel" class="uni-input" name="" placeholder="请输入手机号" v-model="phoneNum"/>
 			</view>
-			<view class="uni-form-item uni-column column-with-btn">
+			<!-- <view class="uni-form-item uni-column column-with-btn">
 				<input type="text" class="uni-input" name="" placeholder="请输入图片验证码" v-model="captchaImg" />
 				<image src="../../static/images/captcha.jpg" mode="" class="img-captcha"></image>
-			</view>
+			</view> -->
 			<view class="uni-form-item uni-column column-with-btn">
 				<input type="number" class="uni-input" name="" placeholder="请输入验证码" />
 				<button :class="{active : !disableCodeBtn}" :disabled="disableCodeBtn" @tap="sendCode">{{codeBtn.text}}</button>
 			</view>
 			<view class="uni-form-item uni-column">
 				<input type="password" class="uni-input" name="" placeholder="请输入新密码" />
+			</view>
+			<view class="uni-form-item uni-column">
+				<input type="password" class="uni-input" name="" placeholder="请重新输入新密码" />
 			</view>
 			<button type="primary" @tap="changeSuccess = !changeSuccess">提交</button>
 		</view>
@@ -25,11 +28,12 @@
 </template>
 
 <script>
+	import { RegExpr } from '../../utils/validation.js';
 	export default {
 		data() {
 			return {
 				phoneNum: '',
-				captchaImg: '',
+				// captchaImg: '',
 				seconds: 10,
 				codeBtn: {
 					text: '获取验证码',
@@ -66,7 +70,7 @@
 		},
 		computed: {
 			disableCodeBtn: function (){
-				return this.codeBtn.waitingCode || this.phoneNum.length < 4;
+				return this.codeBtn.waitingCode || !RegExpr.checkMobile(this.phoneNum);
 			} 
 		}
 	}

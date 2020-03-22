@@ -2,12 +2,12 @@
 	<view class="content">
 		<view class="logo"><image src="../../static/images/logo.png" mode=""></image></view>
 		<view class="uni-form-item uni-column">
-			<input type="tel" class="uni-input" name="" placeholder="请输入手机号" />
+			<input type="tel" class="uni-input" name="" placeholder="请输入手机号" v-model="phoneNum"/>
 		</view>
-		<view class="uni-form-item uni-column column-with-btn">
+		<!-- <view class="uni-form-item uni-column column-with-btn">
 			<input type="text" class="uni-input" name="" placeholder="请输入图片验证码" v-model="captchaImg" />
 			<image src="../../static/images/captcha.jpg" mode="" class="img-captcha"></image>
-		</view>
+		</view> -->
 		<view class="uni-form-item uni-column column-with-btn">
 			<input type="number" class="uni-input" name="" placeholder="请输入验证码" />
 			<button :class="{active : !disableCodeBtn}" :disabled="disableCodeBtn" @tap="sendCode">{{codeBtn.text}}</button>
@@ -21,10 +21,12 @@
 </template>
 
 <script>
+	import { RegExpr } from '../../utils/validation.js';
 	export default {
 		data() {
 			return {
-				captchaImg: '',
+				phoneNum: '',
+				// captchaImg: '',
 				seconds: 10,
 				codeBtn: {
 					text: '获取验证码',
@@ -60,7 +62,7 @@
 		},
 		computed: {
 			disableCodeBtn: function (){
-				return this.codeBtn.waitingCode || this.captchaImg.length < 4;
+				return this.codeBtn.waitingCode || !RegExpr.checkMobile(this.phoneNum);
 			} 
 		}
 	}
@@ -107,10 +109,10 @@
 			}
 		}
 	}
-	.img-captcha{
-		width: 150upx;
-		height: 60upx;
-	}
+	// .img-captcha{
+	// 	width: 150upx;
+	// 	height: 60upx;
+	// }
 	button[type="primary"]{
 		background-color: $color-primary;
 		border-radius: 0;

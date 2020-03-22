@@ -395,8 +395,25 @@ var previewImage = {
   } };
 
 
+function addSafeAreaInsets(result) {
+  if (result.safeArea) {
+    var safeArea = result.safeArea;
+    result.safeAreaInsets = {
+      top: safeArea.top,
+      left: safeArea.left,
+      right: result.windowWidth - safeArea.right,
+      bottom: result.windowHeight - safeArea.bottom };
+
+  }
+}
 var protocols = {
-  previewImage: previewImage };
+  previewImage: previewImage,
+  getSystemInfo: {
+    returnValue: addSafeAreaInsets },
+
+  getSystemInfoSync: {
+    returnValue: addSafeAreaInsets } };
+
 
 var todos = [
 'vibrate'];
@@ -1364,7 +1381,7 @@ function parseBaseComponent(vueComponentOptions)
         }
       },
       detached: function detached() {
-        this.$vm.$destroy();
+        this.$vm && this.$vm.$destroy();
       } },
 
     pageLifetimes: {
@@ -7594,9 +7611,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!*******************************************!*\
-  !*** D:/ycf/www/chuangshibang/pages.json ***!
-  \*******************************************/
+/*!*************************************************************!*\
+  !*** D:/xiewenchong/myGitProjects/chuangshibang/pages.json ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8497,24 +8514,24 @@ main();
 /*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, deprecated, description, devDependencies, files, gitHead, homepage, license, main, name, repository, scripts, version, default */
 /***/ (function(module) {
 
-module.exports = {"_from":"@dcloudio/uni-stat@alpha","_id":"@dcloudio/uni-stat@2.0.0-alpha-25120200103005","_inBundle":false,"_integrity":"sha512-nYoIrRV2e5o/vzr6foSdWi3Rl2p0GuO+LPY3JctyY6uTKgPnuH99d7aL/QQdJ1SacQjBWO+QGK1qankN7oyrWw==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@alpha","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"alpha","saveSpec":null,"fetchSpec":"alpha"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-alpha-25120200103005.tgz","_shasum":"a77a63481f36474f3e86686868051219d1bb12df","_spec":"@dcloudio/uni-stat@alpha","_where":"/Users/guoshengqiang/Documents/dcloud-plugins/alpha/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"6be187a3dfe15f95dd6146d9fec08e1f81100987","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-alpha-25120200103005"};
+module.exports = {"_from":"@dcloudio/uni-stat@alpha","_id":"@dcloudio/uni-stat@2.0.0-alpha-25720200116005","_inBundle":false,"_integrity":"sha512-RZFw3WAaS/CZTzzv9JPaWvmoNitojD/06vPdHSzlqZi8GbuE222lFuyochEjrGkG8rPPrWHAnwfoPBuQVtkfdg==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@alpha","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"alpha","saveSpec":null,"fetchSpec":"alpha"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-alpha-25720200116005.tgz","_shasum":"08bb17aba91c84a981f33d74153aa3dd07b578ad","_spec":"@dcloudio/uni-stat@alpha","_where":"/Users/guoshengqiang/Documents/dcloud-plugins/alpha/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"a129bde60de35f7ef497f43d5a45b4556231995c","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-alpha-25720200116005"};
 
 /***/ }),
 /* 7 */
-/*!************************************************************!*\
-  !*** D:/ycf/www/chuangshibang/pages.json?{"type":"style"} ***!
-  \************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/xiewenchong/myGitProjects/chuangshibang/pages.json?{"type":"style"} ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/login/login": { "navigationBarTitleText": "登陆", "navigationBarBackgroundColor": "#FFFFFF" }, "pages/index/index": { "navigationBarTitleText": "首页", "navigationBarBackgroundColor": "#FFFFFF" }, "pages/mine/mine": { "navigationBarTitleText": "个人中心", "navigationBarBackgroundColor": "#FFFFFF" }, "pages/login/forget-password": { "navigationBarTitleText": "找回密码", "navigationBarBackgroundColor": "#FFFFFF" }, "pages/login/registration": { "navigationBarTitleText": "注册", "navigationBarBackgroundColor": "#FFFFFF" } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/login/login": { "navigationBarTitleText": "登陆", "navigationBarBackgroundColor": "#FFFFFF", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/index/index": { "navigationBarTitleText": "首页", "navigationBarBackgroundColor": "#FFFFFF", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/mine/mine": { "navigationBarTitleText": "个人中心", "navigationBarBackgroundColor": "#FFFFFF", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/login/forget-password": { "navigationBarTitleText": "找回密码", "navigationBarBackgroundColor": "#FFFFFF", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/login/registration": { "navigationBarTitleText": "注册", "navigationBarBackgroundColor": "#FFFFFF", "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
-/*!***********************************************************!*\
-  !*** D:/ycf/www/chuangshibang/pages.json?{"type":"stat"} ***!
-  \***********************************************************/
+/*!*****************************************************************************!*\
+  !*** D:/xiewenchong/myGitProjects/chuangshibang/pages.json?{"type":"stat"} ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8526,9 +8543,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* 10 */,
 /* 11 */,
 /* 12 */
-/*!*******************************************!*\
-  !*** D:/ycf/www/chuangshibang/api/app.js ***!
-  \*******************************************/
+/*!*************************************************************!*\
+  !*** D:/xiewenchong/myGitProjects/chuangshibang/api/app.js ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8546,9 +8563,9 @@ AppModel = /*#__PURE__*/function (_HTTP) {_inherits(AppModel, _HTTP);function Ap
 
 /***/ }),
 /* 13 */
-/*!**********************************************!*\
-  !*** D:/ycf/www/chuangshibang/utils/http.js ***!
-  \**********************************************/
+/*!****************************************************************!*\
+  !*** D:/xiewenchong/myGitProjects/chuangshibang/utils/http.js ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8614,9 +8631,9 @@ HTTP = /*#__PURE__*/function () {
 
 /***/ }),
 /* 14 */
-/*!******************************************!*\
-  !*** D:/ycf/www/chuangshibang/config.js ***!
-  \******************************************/
+/*!************************************************************!*\
+  !*** D:/xiewenchong/myGitProjects/chuangshibang/config.js ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8754,9 +8771,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 18 */
-/*!***********************************************!*\
-  !*** D:/ycf/www/chuangshibang/store/index.js ***!
-  \***********************************************/
+/*!*****************************************************************!*\
+  !*** D:/xiewenchong/myGitProjects/chuangshibang/store/index.js ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9741,9 +9758,9 @@ var index_esm = {
 
 /***/ }),
 /* 20 */
-/*!******************************************************!*\
-  !*** D:/ycf/www/chuangshibang/store/modules/home.js ***!
-  \******************************************************/
+/*!************************************************************************!*\
+  !*** D:/xiewenchong/myGitProjects/chuangshibang/store/modules/home.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9759,9 +9776,9 @@ home;exports.default = _default;
 
 /***/ }),
 /* 21 */
-/*!******************************************************!*\
-  !*** D:/ycf/www/chuangshibang/store/modules/user.js ***!
-  \******************************************************/
+/*!************************************************************************!*\
+  !*** D:/xiewenchong/myGitProjects/chuangshibang/store/modules/user.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9792,9 +9809,9 @@ home;exports.default = _default;
 
 /***/ }),
 /* 22 */
-/*!************************************************************************************************!*\
-  !*** D:/ycf/www/chuangshibang/node_modules/vuex-persistedstate/dist/vuex-persistedstate.es.js ***!
-  \************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** D:/xiewenchong/myGitProjects/chuangshibang/node_modules/vuex-persistedstate/dist/vuex-persistedstate.es.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9809,9 +9826,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* 27 */,
 /* 28 */,
 /* 29 */
-/*!*******************************************!*\
-  !*** D:/ycf/www/chuangshibang/service.js ***!
-  \*******************************************/
+/*!*************************************************************!*\
+  !*** D:/xiewenchong/myGitProjects/chuangshibang/service.js ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9842,6 +9859,99 @@ var addUser = function addUser(userInfo) {
   getUsers: getUsers,
   addUser: addUser };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */
+/*!**********************************************************************!*\
+  !*** D:/xiewenchong/myGitProjects/chuangshibang/utils/validation.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.RegExpr = void 0;var RegExpr = {
+
+  /**
+                                                                                                                     * 校验手机号
+                                                                                                                     * @param mobile
+                                                                                                                     * @returns {boolean}
+                                                                                                                     */
+  checkMobile: function checkMobile(mobile) {
+    return /^[1][0-9]{10}$/.test(mobile);
+  },
+
+  /**
+      * 校验纯数字
+      * @param num
+      * @returns {boolean}
+      */
+  checkNum: function checkNum(num) {
+    return /^[0-9]+$/.test(num);
+  },
+
+  /**
+      * 校验用户名：1-20位字符，首字符为字母
+      * @param str
+      * @returns {RegExp}
+      */
+  checkUserName: function checkUserName(str) {
+    return /^[a-zA-Z]{1,20}$/.test(str);
+  },
+
+  /**
+      * 校验密码：6-20位，数字、字母、下划线
+      * @param str
+      * @returns {boolean}
+      */
+  checkPwd: function checkPwd(str) {
+    return /^(\\w){6,20}$/.test(str);
+  },
+
+  /**
+      * 校验正整数 + 0
+      * @param num
+      * @returns {boolean}
+      */
+  checkPositiveInteger: function checkPositiveInteger(num) {
+    return /^[0-9]*[1-9][0-9]*$/.test(num);
+  },
+
+  /**
+      * 校验字符串是否为数字
+      * @param str
+      * @returns {boolean}
+      */
+  isNumber: function isNumber(str) {
+    var regPos = /^\d+(\.\d+)?$/; //非负浮点数
+    var regNeg = /^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$/; //负浮点数
+    if (regPos.test(str) || regNeg.test(str)) {
+      return true;
+    } else {
+      return false;
+    }
+  } };exports.RegExpr = RegExpr;
 
 /***/ })
 ]]);

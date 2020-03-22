@@ -24,27 +24,27 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.content.data-v-f2152686 {
+.content.data-v-692d540c {
   padding: 60rpx 100rpx 100rpx;
 }
-.logo.data-v-f2152686 {
+.logo.data-v-692d540c {
   text-align: center;
 }
-.logo image.data-v-f2152686 {
+.logo image.data-v-692d540c {
     height: 200rpx;
     width: 200rpx;
     margin: 0 0 40rpx;
 }
-.uni-form-item.data-v-f2152686 {
+.uni-form-item.data-v-692d540c {
   margin-bottom: 40rpx;
   padding: 0;
   border-bottom: 1px solid #e3e3e3;
 }
-.uni-form-item .uni-input.data-v-f2152686 {
+.uni-form-item .uni-input.data-v-692d540c {
     font-size: 30rpx;
     padding: 7px 0;
 }
-.column-with-btn.data-v-f2152686 {
+.column-with-btn.data-v-692d540c {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -59,41 +59,37 @@
   -webkit-align-items: center;
           align-items: center;
 }
-.column-with-btn button.data-v-f2152686 {
+.column-with-btn button.data-v-692d540c {
     font-size: 24rpx;
     margin: 0;
     width: 180rpx;
     text-align: center;
 }
-.column-with-btn button.data-v-f2152686:after {
+.column-with-btn button.data-v-692d540c:after {
       border: none;
 }
-.column-with-btn button.active.data-v-f2152686 {
+.column-with-btn button.active.data-v-692d540c {
       background-color: #b49950;
       color: #fff;
 }
-.img-captcha.data-v-f2152686 {
-  width: 150rpx;
-  height: 60rpx;
-}
-button[type="primary"].data-v-f2152686 {
+button[type="primary"].data-v-692d540c {
   background-color: #b49950;
   border-radius: 0;
   font-size: 34rpx;
   margin-top: 60rpx;
 }
-.links.data-v-f2152686 {
+.links.data-v-692d540c {
   text-align: center;
   margin-top: 40rpx;
   font-size: 26rpx;
   color: #999;
 }
-.links view.data-v-f2152686 {
+.links view.data-v-692d540c {
     display: inline-block;
     vertical-align: top;
     margin: 0 10rpx;
 }
-.links .link-highlight.data-v-f2152686 {
+.links .link-highlight.data-v-692d540c {
     color: #b49950;
 }
 
