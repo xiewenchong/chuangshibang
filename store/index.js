@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 import home from '@/store/modules/home.js'
 import user from '@/store/modules/user.js'
+import login from '@/store/modules/login.js'
 import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex)
@@ -18,7 +19,8 @@ const vuexPersisted = new createPersistedState({
 const store = new Vuex.Store({
 	modules: {
 		home,
-		user
+		user,
+		login
 	},
 	plugins: [vuexPersisted]
 })
